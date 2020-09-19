@@ -1,0 +1,29 @@
+import "./styles.css";
+
+
+
+//HOLA
+
+class Pizza {
+  constructor(masa, tamaño, ingredientes) {
+    this.masa = masa;
+    this.tamaño = tamaño;
+    this.ingredientes = ingredientes;
+  }
+
+  preparar() {
+    console.log(
+      `Preparando Pizza ${this.tamaño}, ${this.masa}, Ingredientes: ${this.ingredientes}`
+    );
+    return this;
+  }
+
+  hornear() {
+    console.log("La pizza se está horneando");
+    console.log("La pizza ya salió del horno");
+    return this;
+}
+}
+
+const PizzaPlatanoQueso = new Pizza ("masa gruesa", "grande",["platano","queso", "mantequilla"]);
+console.log(PizzaPlatanoQueso.preparar());
